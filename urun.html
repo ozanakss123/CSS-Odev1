@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ödev1</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      * {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 5rem;
+        margin-top: 1rem;
+      }
+
+      header h1 {
+        color: rgb(84, 0, 0);
+      }
+
+      header ul {
+        display: flex;
+        flex-direction: row;
+        margin-right: 5rem;
+      }
+
+      header ul li {
+        list-style: none;
+        margin-left: 1rem;
+      }
+
+      header ul li a {
+        text-decoration: none;
+        color: darkblue;
+      }
+
+      header ul li a:hover {
+        color: brown;
+        font-weight: bold;
+      }
+
+      .urun h2 {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: brown;
+        font-size: 2rem;
+      }
+
+      .urun ol li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .urun ol li img {
+        width: 300px;
+        height: 300px;
+        margin-top: 2rem;
+        margin-right: 2rem;
+      }
+
+      h4{
+        color: coral;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Müzik Dükkanım</h1>
+      <ul>
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="urun.html">Ürünlerimiz</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+      </ul>
+    </header>
+    <div class="urun">
+      <h2>Ürünlerimiz</h2>
+      <ol>
+        <li>
+          <div class="image">
+            <img
+              src="data:image/jpeg;base64,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"
+              alt=""
+            />
+          </div>
+          <div class="text">
+            <h4>Fender Player Stratocaster</h4>
+            <p>
+              The good, old standard series is getting up in the years so it's
+              time for something new! The Player Stratocaster PF 3TS made in
+              Mexico is a worthy successor - this model offers everything you
+              can expect from a good Strat: solid alder body, one-piece maple
+              neck, a set of Alnico 5 single coils, modern, playable neck, 2
+              point tremolo With curved steel riders and above-average
+              workmanship, this guitar is a real all-round workhorse.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img
+              src="https://dynamix-audio.com/wp-content/uploads/2019/11/Grand-Piano.jpg"
+              alt=""
+            />
+          </div>
+          <div class="text">
+            <h4>Dynamix Grand Piano</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
+              obcaecati corporis illum aut. Earum temporibus nam at quas
+              aspernatur consequatur.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img
+              src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/172522/14389024_800.jpg"
+              alt=""
+            />
+          </div>
+          <div class="text">
+            <h4>Yamaha V5 SC44 Violin 4/4</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              quia quo quas, inventore obcaecati sint earum reprehenderit
+              cupiditate atque sequi.
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="image">
+            <img
+              src="https://thumbs.static-thomann.de/thumb/padthumb600x600/pics/bdb/496065/15777185_800.jpg"
+              alt=""
+            />
+          </div>
+          <div class="text">
+            <h4>Millenium Focus Junior Drum Set Red</h4>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est hic
+              in laborum ad assumenda dolores, et ullam id. Nisi, nulla.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>
